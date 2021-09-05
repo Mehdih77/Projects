@@ -1,0 +1,47 @@
+.box {
+  position: relative;
+  margin: auto;
+  width: 35rem;
+  height: 20rem;
+  background: linear-gradient(
+    45deg,
+    rgb(1, 83, 177),
+    rgb(149, 2, 51)
+  );
+  transform: perspective(1000px);
+  transform-style: preserve-3d;
+  border-radius: 8px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transition: all 200ms ease;
+}
+.box h1{
+    color: #fff;
+    text-shadow: 0 0 22px rgba(0, 0, 0, 0.7);
+    transform: translateZ(50px);
+    text-align: center;
+    padding-top: 8rem;
+    letter-spacing: 0.6rem;
+}
+.balls {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+}
+.balls span{
+    display: inline-flex;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.7);
+    transform: translateZ(50px);
+}
+.cross {
+    position: absolute;
+    top: 0.8rem;
+    right: 1.8rem;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 0 0 22px rgba(0, 0, 0, 0.7);
+    transform: translateZ(50px) rotate(45deg);
+}
