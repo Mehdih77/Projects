@@ -1,0 +1,106 @@
+/* Basic Styles */
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+body {
+  background-color: #17181c;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  position: relative;
+  width: 240px;
+  padding: 20px;
+  margin: 25px 0;
+  font-size: 20px;
+  font-weight: 700;
+  border: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.4s linear;
+  z-index: 2;
+  cursor: pointer;
+}
+button::before,
+button::after {
+  content: "";
+  background-color: #61dafb;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Button 1 */
+.btn-1:hover {
+  background-color: #61dafb;
+  box-shadow: 0 0 5px #61dafb, 0 0 25px #61dafb, 0 0 50px #61dafb,
+    0 0 200px #61dafb;
+}
+
+/* Button 2 */
+.btn-2::after {
+  height: 0;
+  top: 0;
+  left: 0;
+  transition-duration: 0.5s;
+  width: 100%;
+}
+.btn-2:hover:after {
+  height: 100%;
+}
+
+/* Button 3 */
+.btn-3::after {
+  height: 0;
+  bottom: 0;
+  left: 0;
+  transition-duration: 0.5s;
+  width: 100%;
+}
+.btn-3:hover:after {
+  height: 100%;
+}
+
+/* Button 4 */
+.btn-4:hover {
+  box-shadow: 10px 10px 0 #61dafb;
+  top: -5px;
+  left: -5px;
+}
+
+/* Button 5 */
+.btn-5::after {
+  height: 100%;
+  top: 0;
+  left: -35%;
+  transform: skew(50deg);
+  transform-origin: top left;
+  transition-duration: 0.5s;
+  width: 0;
+}
+.btn-5:hover:after {
+  height: 100%;
+  width: 145%;
+}
+
+/* Button 6 */
+.btn-6:hover {
+  box-shadow: inset -150px 0 0 0 #61dafb, inset 150px 0 0 0 #61dafb;
+}
+
+/* Button 7 */
+.btn-7:hover {
+  border: 2px solid #61dafb;
+  color: #61dafb;
+  background-color: #17181c;
+}
+
+/* Button 8 */
+.btn-8:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 7px 0 -2px #fb4242, 0 15px 0 -4px #61dafb,
+    0 16px 10px -3px #61dafb;
+}
