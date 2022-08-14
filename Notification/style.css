@@ -1,0 +1,62 @@
+body {
+  background-color: rgb(30, 30, 30);
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification {
+  position: relative;
+  display: inline-block;
+  /* max-width: 300px; */
+  padding: 20px 15px;
+  border-radius: 4px;
+  background-color: #020c1a;
+  color: #f6f5f9;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(30px);
+  opacity: 0;
+  visibility: hidden;
+  animation: fade 4s linear forwards;
+  width: 300px;
+  margin-top: 16px;
+}
+
+.progress {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 0;
+  height: 3px;
+  background-image: linear-gradient(to right, #529bdb, #3250bf);
+  border-radius: 4px;
+  animation: progress 3s 0.25s linear forwards;
+}
+
+@keyframes fade {
+  5% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+@keyframes progress {
+  to {
+    width: calc(100% - 10px);
+  }
+}
